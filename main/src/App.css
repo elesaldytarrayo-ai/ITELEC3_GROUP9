@@ -4,14 +4,23 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f6f3ff;
   color: #25233a;
 }
 
-button {
+button,
+select {
   font-family: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 .app {
@@ -20,24 +29,23 @@ button {
 
 .page {
   min-height: 100vh;
-  padding: 110px 8% 60px;
+  padding: 115px 8% 60px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 38px;
+  font-size: 40px;
   margin-bottom: 15px;
-  background: linear-gradient(90deg, #246bfd, #c83cff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #4c45bd;
 }
 
 .section-description {
   text-align: center;
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto 45px;
   color: #66647a;
   line-height: 1.7;
+  font-size: 16px;
 }
 
 .primary-btn {
@@ -47,7 +55,6 @@ button {
   background: linear-gradient(90deg, #2474ff, #c43cff);
   color: white;
   font-weight: bold;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -63,7 +70,6 @@ button {
   background: white;
   color: #3567db;
   font-weight: bold;
-  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -83,7 +89,7 @@ button {
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   border: 1px solid #e5ddff;
   border-radius: 20px;
   padding: 28px;
@@ -92,7 +98,7 @@ button {
 }
 
 .info-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(55, 50, 100, 0.15);
 }
 
@@ -111,9 +117,19 @@ button {
   margin-bottom: 15px;
 }
 
+.info-list {
+  padding-left: 20px;
+  color: #686679;
+  line-height: 1.8;
+}
+
+.info-list li {
+  margin-bottom: 8px;
+}
+
 @media (max-width: 700px) {
   .page {
-    padding: 100px 5% 40px;
+    padding: 105px 5% 40px;
   }
 
   .section-title {

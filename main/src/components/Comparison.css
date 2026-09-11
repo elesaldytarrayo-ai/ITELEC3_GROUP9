@@ -1,5 +1,5 @@
 .comparison-container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   overflow: hidden;
   border-radius: 20px;
@@ -41,6 +41,25 @@
   line-height: 1.6;
 }
 
+.analysis-box {
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 30px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #edf4ff, #fff0ff);
+}
+
+.analysis-box h2 {
+  color: #5148c4;
+  margin-bottom: 15px;
+}
+
+.analysis-box p {
+  color: #686679;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 700px) {
   .comparison-container {
     overflow-x: auto;
@@ -48,6 +67,6 @@
 
   .comparison-header,
   .comparison-row {
-    min-width: 700px;
+    min-width: 800px;
   }
 }

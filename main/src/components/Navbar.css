@@ -3,22 +3,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 75px;
+  min-height: 75px;
   z-index: 1000;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 7%;
+  padding: 12px 6%;
 
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
 
   border-bottom: 1px solid #e7e1ff;
 }
 
 .logo {
+  border: none;
+  background: transparent;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
@@ -31,30 +33,70 @@
 
 .nav-links {
   display: flex;
-  gap: 8px;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links button {
   border: none;
   background: transparent;
-  padding: 9px 12px;
+  padding: 8px 10px;
   border-radius: 20px;
   color: #56536b;
   cursor: pointer;
   font-weight: bold;
+  font-size: 13px;
 }
 
-.nav-links button:hover {
+.nav-links button:hover,
+.nav-links button.active {
   background: linear-gradient(90deg, #e8f0ff, #fae9ff);
   color: #5b4bd8;
 }
 
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0 3%;
+.menu-btn {
+  display: none;
+  border: none;
+  background: #eef3ff;
+  color: #4d5fd1;
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@media (max-width: 1050px) {
+  .menu-btn {
+    display: block;
   }
 
   .nav-links {
     display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(50, 40, 100, 0.1);
+  }
+
+  .nav-links.open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links button {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-links.open {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 12px 5%;
   }
 }

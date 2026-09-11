@@ -4,47 +4,48 @@ function Comparison({ setPage }) {
   const comparisons = [
     {
       topic: "Family",
-      past: "Traditional expectations often placed women in household roles.",
-      present: "Family responsibilities can be shared between partners."
+      past: "Traditional expectations often assigned women more household and caregiving responsibilities.",
+      present: "Some families increasingly share household and caregiving responsibilities."
     },
     {
       topic: "Work",
-      past: "Certain occupations were strongly associated with one gender.",
-      present: "Men and women can pursue many different professions."
+      past: "Certain occupations were strongly associated with particular genders.",
+      present: "Women and men participate in many different professions."
     },
     {
       topic: "Education",
-      past: "Educational opportunities were more limited for some groups.",
-      present: "Education is widely available to both boys and girls."
+      past: "Educational opportunities were more limited for many people, especially women in earlier periods.",
+      present: "Women and men have broad access to formal education, although inequalities can still exist."
     },
     {
       topic: "Leadership",
       past: "Leadership was often influenced by traditional social expectations.",
-      present: "Women and men participate in leadership positions."
+      present: "Women and men participate in leadership positions in different sectors."
     },
     {
-      topic: "Society",
-      past: "Gender stereotypes were often strongly followed.",
-      present: "People increasingly challenge stereotypes and promote equality."
+      topic: "Media",
+      past: "Traditional portrayals often emphasized conventional masculine and feminine roles.",
+      present: "Media includes more diverse representations, although stereotypes remain."
     }
   ];
 
   return (
     <section className="page">
       <h1 className="section-title">
-        Past vs. Present
+        Analysis: Past vs. Present
       </h1>
 
       <p className="section-description">
-        Comparing different periods helps us understand how Philippine
-        society has changed and which gender expectations still exist.
+        Comparing different periods helps us understand changes in
+        Philippine gender roles and identify challenges that continue
+        today.
       </p>
 
       <div className="comparison-container">
         <div className="comparison-header">
           <div>Topic</div>
-          <div>Past</div>
-          <div>Present</div>
+          <div>Historical Perspective</div>
+          <div>Contemporary Perspective</div>
         </div>
 
         {comparisons.map((item, index) => (
@@ -56,11 +57,30 @@ function Comparison({ setPage }) {
         ))}
       </div>
 
+      <div className="analysis-box">
+        <h2>Our Critical Analysis</h2>
+
+        <p>
+          Philippine gender roles have changed significantly over
+          time. Education, economic development, political participation,
+          social movements, and changing family structures have created
+          more opportunities for women and men.
+        </p>
+
+        <p>
+          However, progress does not mean that all gender inequalities
+          have disappeared. Stereotypes, discrimination, unequal
+          responsibilities, and differences in representation may still
+          affect people. Understanding these continuing challenges is
+          important in creating a more respectful and inclusive society.
+        </p>
+      </div>
+
       <button
-        className="secondary-btn back-btn"
-        onClick={() => setPage("home")}
+        className="primary-btn back-btn"
+        onClick={() => setPage("multimedia")}
       >
-        ← Back to Home
+        View Multimedia →
       </button>
     </section>
   );

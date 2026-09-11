@@ -1,20 +1,50 @@
+import { useState } from "react";
 import "./Navbar.css";
 
-function Navbar({ setPage }) {
+function Navbar({ setPage, currentPage }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = (page) => {
+    setPage(page);
+    setMenuOpen(false);
+  };
+
+  const links = [
+    ["home", "Home"],
+    ["understanding", "Gender Roles"],
+    ["historical", "History"],
+    ["contemporary", "Contemporary"],
+    ["issues", "Issues"],
+    ["comparison", "Analysis"],
+    ["multimedia", "Multimedia"],
+    ["reflection", "Reflection"],
+    ["conclusion", "Conclusion"],
+    ["references", "References"],
+  ];
+
   return (
     <nav className="navbar">
-      <div className="logo" onClick={() => setPage("home")}>
+      <button className="logo" onClick={() => navigate("home")}>
         <span>Gender</span> PH
-      </div>
+      </button>
 
-      <div className="nav-links">
-        <button onClick={() => setPage("home")}>Home</button>
-        <button onClick={() => setPage("historical")}>History</button>
-        <button onClick={() => setPage("contemporary")}>Modern</button>
-        <button onClick={() => setPage("comparison")}>Compare</button>
-        <button onClick={() => setPage("figures")}>Figures</button>
-        <button onClick={() => setPage("issues")}>Issues</button>
-        <button onClick={() => setPage("reflection")}>Reflection</button>
+      <button
+        className="menu-btn"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        {links.map(([page, label]) => (
+          <button
+            key={page}
+            className={currentPage === page ? "active" : ""}
+            onClick={() => navigate(page)}
+          >
+            {label}
+          </button>
+        ))}
       </div>
     </nav>
   );

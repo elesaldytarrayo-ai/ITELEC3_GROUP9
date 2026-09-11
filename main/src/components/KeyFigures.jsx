@@ -7,7 +7,7 @@ function KeyFigures({ setPage }) {
       role: "Revolutionary Leader",
       icon: "👩",
       description:
-        "Gabriela Silang became known as a revolutionary leader and symbol of women's participation in resistance and leadership."
+        "Gabriela Silang became known as a revolutionary leader and symbol of women's participation in resistance and leadership during the colonial period."
     },
     {
       name: "Corazon Aquino",
@@ -21,14 +21,14 @@ function KeyFigures({ setPage }) {
       role: "National Hero",
       icon: "📖",
       description:
-        "Jose Rizal advocated education and social reform and wrote about the importance of education and the role of women in society."
+        "Jose Rizal advocated education and social reform. His writings also discussed the importance of educating women and their role in society."
     },
     {
-      name: "Filipino Women and Men",
-      role: "Everyday Changemakers",
+      name: "Filipino Changemakers",
+      role: "Everyday Leaders",
       icon: "🤝",
       description:
-        "Ordinary Filipino women and men continue to challenge stereotypes through education, work, family life, and community involvement."
+        "Filipino women and men continue to challenge stereotypes through education, employment, family life, leadership, and community participation."
     }
   ];
 
@@ -39,14 +39,17 @@ function KeyFigures({ setPage }) {
       </h1>
 
       <p className="section-description">
-        Throughout Philippine history, many people have challenged
-        traditional expectations and contributed to social change.
+        Individuals and communities have contributed to changing
+        ideas about gender, education, leadership, and social
+        participation in the Philippines.
       </p>
 
       <div className="figure-grid">
         {figures.map((figure, index) => (
           <div className="figure-card" key={index}>
-            <div className="figure-icon">{figure.icon}</div>
+            <div className="figure-icon">
+              {figure.icon}
+            </div>
 
             <h2>{figure.name}</h2>
 
@@ -58,10 +61,10 @@ function KeyFigures({ setPage }) {
       </div>
 
       <button
-        className="secondary-btn back-btn"
-        onClick={() => setPage("home")}
+        className="primary-btn back-btn"
+        onClick={() => setPage("contemporary")}
       >
-        ← Back to Home
+        Continue to Contemporary Roles →
       </button>
     </section>
   );

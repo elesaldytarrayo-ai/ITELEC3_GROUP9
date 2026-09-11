@@ -1,0 +1,25 @@
+.important-box {
+  max-width: 850px;
+  margin: 45px auto 0;
+  padding: 30px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #e8f1ff, #fbe9ff);
+  border: 1px solid #ddd4ff;
+}
+
+.important-box h2 {
+  color: #5148c4;
+  margin-bottom: 12px;
+}
+
+.important-box p {
+  color: #686679;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.important-box ul {
+  padding-left: 22px;
+  color: #686679;
+  line-height: 1.8;
+}

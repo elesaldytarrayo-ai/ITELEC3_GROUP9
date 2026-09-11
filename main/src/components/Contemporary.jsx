@@ -5,32 +5,42 @@ function Contemporary({ setPage }) {
     {
       icon: "👩‍💼",
       title: "Women in Careers",
-      text: "Filipino women participate in many professions, businesses, government positions, technology, education, and other fields."
+      text: "Filipino women participate in professions, businesses, government, education, technology, healthcare, and many other fields."
     },
     {
       icon: "👨‍👩‍👧",
       title: "Men in Family Care",
-      text: "More men are actively involved in childcare, household responsibilities, and supporting their families."
+      text: "Many men actively participate in childcare, household responsibilities, and emotional and financial support for their families."
     },
     {
       icon: "🎓",
       title: "Education",
-      text: "Education provides opportunities for people regardless of gender to develop skills and pursue their goals."
+      text: "Education provides opportunities for people of different genders to develop skills and pursue academic and professional goals."
     },
     {
       icon: "💻",
-      title: "Technology",
-      text: "Technology and social media have created new opportunities for people to express themselves and challenge stereotypes."
+      title: "Technology and Media",
+      text: "Digital technology and social media allow people to express themselves while also creating spaces for discussions about gender equality."
     },
     {
       icon: "🏛️",
       title: "Leadership",
-      text: "Filipino women and men can participate in leadership and decision-making in communities and organizations."
+      text: "Women and men participate in leadership in government, schools, organizations, businesses, and communities."
+    },
+    {
+      icon: "🏠",
+      title: "Family Responsibilities",
+      text: "Some Filipino families increasingly divide household duties according to ability, agreement, work schedules, and family needs."
+    },
+    {
+      icon: "📺",
+      title: "Media Representation",
+      text: "Media can influence how people understand masculinity, femininity, family roles, careers, and appearance."
     },
     {
       icon: "🤝",
-      title: "Shared Responsibilities",
-      text: "Modern families increasingly share responsibilities based on ability, agreement, and circumstances rather than gender alone."
+      title: "Community",
+      text: "People of different genders contribute to community development, volunteer activities, education, and social programs."
     }
   ];
 
@@ -41,9 +51,9 @@ function Contemporary({ setPage }) {
       </h1>
 
       <p className="section-description">
-        Today, Filipino society is gradually moving toward greater
-        flexibility in gender roles. People have more opportunities to
-        choose careers, responsibilities, and lifestyles.
+        Gender roles in the Philippines are changing as people gain
+        greater access to education, employment, technology, leadership,
+        and opportunities for social participation.
       </p>
 
       <div className="card-grid">
@@ -58,18 +68,19 @@ function Contemporary({ setPage }) {
 
       <div className="message-box">
         <h2>💙💗 A Changing Society</h2>
+
         <p>
-          Gender roles are not always fixed. They can change as society
-          develops. Respect, equal opportunities, and shared responsibility
-          can help create a more inclusive community.
+          Contemporary Filipino society shows progress toward more
+          flexible gender roles, but traditional expectations and
+          inequalities can still influence people's experiences.
         </p>
       </div>
 
       <button
-        className="secondary-btn back-btn"
-        onClick={() => setPage("home")}
+        className="primary-btn back-btn"
+        onClick={() => setPage("issues")}
       >
-        ← Back to Home
+        Explore Gender Issues →
       </button>
     </section>
   );

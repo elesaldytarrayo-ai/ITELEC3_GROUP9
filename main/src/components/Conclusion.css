@@ -1,0 +1,50 @@
+.conclusion-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conclusion-card {
+  max-width: 850px;
+  padding: 40px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(60, 50, 100, 0.1);
+}
+
+.conclusion-icon {
+  text-align: center;
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.conclusion-card h2 {
+  text-align: center;
+  color: #405fd0;
+  margin-bottom: 25px;
+}
+
+.conclusion-card p {
+  color: #686679;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.final-message {
+  max-width: 850px;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(135deg, #e3efff, #f9e5ff);
+}
+
+.final-message h2 {
+  color: #5b4bd2;
+  margin-bottom: 10px;
+}
+
+.final-message p {
+  color: #686679;
+  line-height: 1.7;
+}

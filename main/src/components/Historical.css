@@ -1,5 +1,5 @@
 .timeline {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   position: relative;
 }
@@ -47,14 +47,37 @@
 .timeline-content span {
   color: #c13be5;
   font-weight: bold;
+  display: block;
+}
+
+.timeline-content small {
+  color: #777486;
 }
 
 .timeline-content h2 {
-  margin: 7px 0 10px;
+  margin: 8px 0 10px;
   color: #365ed1;
 }
 
 .timeline-content p {
   color: #6b697b;
+  line-height: 1.7;
+}
+
+.historical-note {
+  max-width: 850px;
+  margin: 45px auto 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #edf4ff, #fff0ff);
+  border-radius: 22px;
+}
+
+.historical-note h2 {
+  color: #5148c4;
+  margin-bottom: 10px;
+}
+
+.historical-note p {
+  color: #686679;
   line-height: 1.7;
 }
