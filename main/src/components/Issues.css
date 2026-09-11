@@ -1,0 +1,47 @@
+.issue-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  border-left: 5px solid #5178ed;
+  box-shadow: 0 8px 25px rgba(60, 50, 100, 0.08);
+  transition: 0.3s;
+}
+
+.issue-card:hover {
+  transform: translateY(-5px);
+  border-left-color: #c13de1;
+}
+
+.issue-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.issue-card h3 {
+  color: #405fd0;
+  margin-bottom: 10px;
+}
+
+.issue-card p {
+  color: #696779;
+  line-height: 1.7;
+}
+
+.equality-banner {
+  max-width: 850px;
+  margin: 45px auto 0;
+  text-align: center;
+  padding: 35px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #e3efff, #f9e5ff);
+}
+
+.equality-banner h2 {
+  color: #5b4bd2;
+  margin-bottom: 12px;
+}
+
+.equality-banner p {
+  color: #686679;
+  line-height: 1.7;
+}

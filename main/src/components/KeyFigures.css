@@ -1,0 +1,49 @@
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.figure-card {
+  background: white;
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #e5defa;
+  box-shadow: 0 10px 25px rgba(60, 50, 100, 0.08);
+  transition: 0.3s;
+}
+
+.figure-card:hover {
+  transform: translateY(-8px);
+}
+
+.figure-icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #dceaff, #f8ddff);
+  font-size: 38px;
+}
+
+.figure-card h2 {
+  margin: 18px 0 5px;
+  color: #3e5fc9;
+}
+
+.figure-card span {
+  color: #c03de0;
+  font-weight: bold;
+}
+
+.figure-card p {
+  margin-top: 15px;
+  color: #6b697b;
+  line-height: 1.7;
+}

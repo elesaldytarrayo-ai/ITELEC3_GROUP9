@@ -1,0 +1,53 @@
+.comparison-container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(60, 50, 100, 0.1);
+}
+
+.comparison-header,
+.comparison-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 1.5fr;
+}
+
+.comparison-header {
+  background: linear-gradient(90deg, #3275ff, #c43de7);
+  color: white;
+  font-weight: bold;
+}
+
+.comparison-header div,
+.comparison-row > * {
+  padding: 20px;
+}
+
+.comparison-row {
+  border-bottom: 1px solid #eee9f7;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row strong {
+  color: #3e61cf;
+}
+
+.comparison-row p {
+  color: #69677a;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .comparison-container {
+    overflow-x: auto;
+  }
+
+  .comparison-header,
+  .comparison-row {
+    min-width: 700px;
+  }
+}

@@ -1,0 +1,36 @@
+.modern-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-card::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -30px;
+  top: -30px;
+  border-radius: 50%;
+  background: #eee8ff;
+}
+
+.message-box {
+  margin: 45px auto 0;
+  max-width: 850px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+
+  background: linear-gradient(135deg, #e8f1ff, #fbe9ff);
+  border: 1px solid #ddd4ff;
+}
+
+.message-box h2 {
+  color: #5d4bd2;
+  margin-bottom: 12px;
+}
+
+.message-box p {
+  color: #686679;
+  line-height: 1.7;
+}
