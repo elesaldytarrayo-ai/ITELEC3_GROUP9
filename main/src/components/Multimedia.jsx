@@ -1,135 +1,86 @@
 import "./Multimedia.css";
 
+import precolonialWomen from "../assets/images/precolonial-women.jpg";
+import filipinoWomen from "../assets/images/filipino-women.jpg";
+import genderEquality from "../assets/images/gender-equality.jpg";
+
+import genderRolesVideo from "../assets/videos/gender-roles.mp4";
+
 function Multimedia({ setPage }) {
+  const images = [
+    {
+      image: precolonialWomen,
+      title: "Women in Pre-Colonial Philippines",
+      description:
+        "An illustration representing the roles and participation of women in pre-colonial Philippine communities.",
+    },
+    {
+      image: filipinoWomen,
+      title: "Filipino Women in Society",
+      description:
+        "Women have contributed to Philippine families, education, work, leadership, and community life.",
+    },
+    {
+      image: genderEquality,
+      title: "Gender Equality",
+      description:
+        "Gender equality promotes respect, fairness, and equal opportunities for everyone.",
+    },
+  ];
+
   return (
-    <section className="page">
+    <section className="page multimedia-page">
       <h1 className="section-title">
-        Multimedia Section
+        Multimedia
       </h1>
 
       <p className="section-description">
-        Multimedia materials help explain gender roles through
-        visual information, historical resources, videos, and
-        educational materials.
+        Visual materials and videos help us better understand the
+        development of gender roles in the Philippine context.
       </p>
 
-      <div className="media-grid">
-        <div className="media-card">
-          <div className="media-icon">🎬</div>
-
-          <h2>Educational Video</h2>
-
-          <p>
-            Include a relevant educational video about gender
-            equality, gender roles, Filipino society, or women's
-            participation in Philippine history.
-          </p>
-
-          <div className="video-placeholder">
-            <span>▶</span>
-            <p>Video Area</p>
-          </div>
-
-          <p className="media-note">
-            Replace this area with your selected educational
-            YouTube video embed.
-          </p>
-        </div>
-
-        <div className="media-card">
-          <div className="media-icon">📊</div>
-
-          <h2>Infographic</h2>
-
-          <p>
-            Add an infographic showing information such as women's
-            participation in education, employment, leadership,
-            or other gender-related Philippine data.
-          </p>
-
-          <div className="chart">
-            <div>
-              <span>Education</span>
-              <div className="bar">
-                <i style={{ width: "85%" }}></i>
-              </div>
-            </div>
-
-            <div>
-              <span>Workplace</span>
-              <div className="bar">
-                <i style={{ width: "70%" }}></i>
-              </div>
-            </div>
-
-            <div>
-              <span>Leadership</span>
-              <div className="bar">
-                <i style={{ width: "60%" }}></i>
-              </div>
-            </div>
-          </div>
-
-          <p className="media-note">
-            These visual bars are illustrative. Replace them with
-            properly sourced Philippine statistics for submission.
-          </p>
-        </div>
-
-        <div className="media-card">
-          <div className="media-icon">🖼️</div>
-
-          <h2>Historical Images</h2>
-
-          <p>
-            Add properly credited historical photographs,
-            illustrations, documents, or other visual materials
-            that support the historical discussion.
-          </p>
-
-          <div className="image-placeholder">
-            <span>🖼️</span>
-            <p>Historical Image Area</p>
-          </div>
-        </div>
-
-        <div className="media-card">
-          <div className="media-icon">📜</div>
-
-          <h2>Timeline Visual</h2>
-
-          <p>
-            The timeline connects important historical periods
-            and demonstrates how gender expectations changed over
-            time.
-          </p>
-
-          <div className="mini-timeline">
-            <span>Pre-Colonial</span>
-            <span>Spanish</span>
-            <span>American</span>
-            <span>Post-War</span>
-            <span>Today</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="media-warning">
-        <h2>Important</h2>
+      {/* VIDEO SECTION */}
+      <div className="multimedia-video">
+        <h2>🎥 Video Presentation</h2>
 
         <p>
-          All images, videos, charts, and other borrowed materials
-          must be properly credited in the References section.
-          Multimedia should support the academic content rather
-          than simply decorate the website.
+          This video provides additional information about gender roles
+          and gender equality in Philippine society.
         </p>
+
+        <video controls>
+          <source src={genderRolesVideo} type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </div>
+
+      {/* IMAGE SECTION */}
+      <div className="multimedia-images">
+        <h2>🖼️ Images and Illustrations</h2>
+
+        <div className="media-grid">
+          {images.map((item, index) => (
+            <div className="media-card" key={index}>
+              <img
+                src={item.image}
+                alt={item.title}
+              />
+
+              <div className="media-content">
+                <h3>{item.title}</h3>
+
+                <p>{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <button
-        className="primary-btn back-btn"
-        onClick={() => setPage("reflection")}
+        className="secondary-btn back-btn"
+        onClick={() => setPage("home")}
       >
-        Go to Reflection →
+        ← Back to Home
       </button>
     </section>
   );
