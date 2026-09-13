@@ -72,7 +72,7 @@ function Home({ setPage }) {
     },
     {
       image: member7,
-      fullName: "Catillo, Mika Ella Manalangit",
+      fullName: "Catillo, Mika Ela Manlangit",
       age: "20",
       address: "Calbayog City, Samar",
       course: "Bachelor of Science in Information Technology",
