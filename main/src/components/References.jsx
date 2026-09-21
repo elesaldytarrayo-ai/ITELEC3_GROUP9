@@ -21,9 +21,7 @@ function References({ setPage }) {
     {
       category: "Multimedia Sources",
       items: [
-        "https://example.com/educational-video",
-        "https://example.com/historical-photograph",
-        "https://example.com/infographic"
+        "https://www.youtube.com/watch?v=Ulh0DnFUGsk"
       ]
     }
   ];
