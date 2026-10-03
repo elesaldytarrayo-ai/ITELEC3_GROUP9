@@ -11,13 +11,11 @@ function Navbar({ setPage, currentPage }) {
 
   const links = [
     ["home", "Home"],
-    ["understanding", "Gender Roles"],
     ["historical", "History"],
-    ["contemporary", "Contemporary"],
+    ["contemporary", "Today"],
     ["issues", "Issues"],
     ["comparison", "Analysis"],
     ["multimedia", "Multimedia"],
-    ["reflection", "Reflection"],
     ["conclusion", "Conclusion"],
     ["references", "References"],
   ];

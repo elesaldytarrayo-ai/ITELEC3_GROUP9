@@ -12,6 +12,7 @@ import Multimedia from "./components/Multimedia";
 import Reflection from "./components/Reflection";
 import Conclusion from "./components/Conclusion";
 import References from "./components/References";
+import Statistics from "./components/Statistics";
 
 import "./App.css";
 
@@ -58,6 +59,10 @@ function App() {
 
       {page === "multimedia" && (
         <Multimedia setPage={goToPage} />
+      )}
+
+      {page === "statistics" && (
+        <Statistics setPage={goToPage} />
       )}
 
       {page === "reflection" && (

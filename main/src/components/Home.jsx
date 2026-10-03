@@ -118,6 +118,13 @@ function Home({ setPage }) {
             View Modern Roles
           </button>
 
+          <button
+            className="secondary-btn"
+            onClick={() => setPage("statistics")}
+          >
+            📊 View Filipino Statistics
+          </button>
+
         </div>
 
         {/* INTRODUCTION CARDS */}
@@ -195,7 +202,6 @@ function Home({ setPage }) {
             <div
               className="home-member-card"
               key={index}
-              onClick={() => setPage("figures")}
             >
 
               {/* TOP DESIGN */}
@@ -257,13 +263,13 @@ function Home({ setPage }) {
         </div>
 
 
-        {/* VIEW FULL PROFILE BUTTON */}
+        {/* VIEW KEY FIGURES BUTTON */}
 
         <button
           className="view-members-btn"
           onClick={() => setPage("figures")}
         >
-          View Individual Contributed Profiles →
+          View Key Figures →
         </button>
 
       </div>
@@ -295,6 +301,13 @@ function Home({ setPage }) {
 
           <button
             className="primary-btn"
+            onClick={() => setPage("understanding")}
+          >
+            📚 Understanding Gender Roles
+          </button>
+
+          <button
+            className="secondary-btn"
             onClick={() => setPage("comparison")}
           >
             Compare Past and Present
