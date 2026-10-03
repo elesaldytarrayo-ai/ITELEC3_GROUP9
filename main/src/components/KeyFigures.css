@@ -1,69 +1,95 @@
-.keyfigures-page { background: #f8fafc; }
+/* ============================================================
+   KEY FIGURES SECTION
+   - Portrait sits at the top of each card
+   - FULL content (period, birth, contribution, importance)
+     is ALWAYS visible below the portrait — no hover needed
+   - Modern design with gradient accents and smooth interactions
+============================================================ */
 
-.figures-header {
-  max-width: 820px;
-  margin: 0 auto 45px;
-  text-align: center;
-}
-
-.figures-badge {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: linear-gradient(90deg, #eff6ff, #fdf2f8);
-  border: 1px solid #dbeafe;
-  color: #2563eb;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  margin-bottom: 14px;
-}
+/* ============ FIGURES GRID ============ */
 
 .figures-grid {
   max-width: 1180px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
+/* ============ FIGURE CARD ============ */
+
 .figure-profile {
+  position: relative;
   overflow: hidden;
   background: #ffffff;
+  border-radius: 22px;
   border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 4px 14px rgba(15, 23, 42, 0.06),
+    0 1px 3px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.35s ease;
 }
 
 .figure-profile:hover {
-  transform: translateY(-6px);
-  border-color: #fbcfe8;
-  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.12);
+  transform: translateY(-8px);
+  border-color: #c7d2fe;
+  box-shadow:
+    0 24px 50px rgba(37, 99, 235, 0.16),
+    0 8px 20px rgba(236, 72, 153, 0.08);
 }
+
+/* ============ IMAGE (TOP PORTION) ============ */
 
 .figure-image-container {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 340px;
   overflow: hidden;
-  background: #f1f5f9;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  flex-shrink: 0;
 }
 
 .figure-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
-  transition: transform 0.5s ease;
+  transition:
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.5s ease;
+  will-change: transform;
 }
 
-.figure-profile:hover .figure-image { transform: scale(1.05); }
+.figure-profile:hover .figure-image {
+  transform: scale(1.06);
+  filter: brightness(1.02) saturate(1.05);
+}
+
+/* Subtle dark fade at bottom of image so the number badge reads well */
+
+.figure-image-container::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.35), transparent);
+  pointer-events: none;
+}
+
+/* ============ NUMBER BADGE ============ */
 
 .figure-number {
   position: absolute;
-  top: 16px; left: 16px;
-  width: 42px; height: 42px;
+  top: 18px;
+  left: 18px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,42 +97,93 @@
   background: linear-gradient(135deg, #2563eb, #ec4899);
   color: #ffffff;
   font-size: 17px;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  font-weight: 800;
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.4),
+    0 0 0 3px rgba(255, 255, 255, 0.9);
+  z-index: 3;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.figure-information { padding: 28px; }
+.figure-profile:hover .figure-number {
+  transform: scale(1.12) rotate(-8deg);
+}
+
+/* ============ INFORMATION PANEL (ALWAYS VISIBLE) ============ */
+
+.figure-information {
+  padding: 28px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #ffffff;
+  position: relative;
+}
+
+/* Small gradient accent line at the top of the info panel */
+
+.figure-information::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 28px;
+  right: 28px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, #2563eb, #ec4899);
+}
+
+/* ============ PERIOD BADGE ============ */
 
 .figure-period {
   display: inline-block;
-  padding: 5px 12px;
+  align-self: flex-start;
+  padding: 6px 14px;
   border-radius: 20px;
   background: linear-gradient(90deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
   color: #2563eb;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 14px;
+  margin-top: 6px;
+  transition: all 0.3s ease;
 }
 
+.figure-profile:hover .figure-period {
+  background: linear-gradient(90deg, #2563eb, #ec4899);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+/* ============ NAME & ROLE ============ */
+
 .figure-information h2 {
-  color: #1e293b;
-  font-size: 26px;
+  color: #0f172a;
+  font-size: 24px;
   margin-bottom: 4px;
-  letter-spacing: -0.4px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-weight: 800;
 }
 
 .figure-information h3 {
   color: #ec4899;
-  font-size: 15px;
+  font-size: 14.5px;
   margin-bottom: 20px;
   font-weight: 500;
+  line-height: 1.35;
 }
+
+/* ============ BASIC INFO CHIPS (ALWAYS VISIBLE) ============ */
 
 .figure-basic-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 22px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .figure-basic-info div {
@@ -114,56 +191,98 @@
   border-radius: 12px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.figure-basic-info div:hover {
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  border-color: #c7d2fe;
+  transform: translateY(-2px);
 }
 
 .figure-basic-info span {
   display: block;
   color: #64748b;
-  font-size: 11.5px;
+  font-size: 10.5px;
   margin-bottom: 4px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.6px;
 }
 
 .figure-basic-info strong {
   display: block;
-  color: #1e293b;
-  font-size: 13.5px;
-  line-height: 1.4;
-}
-
-.figure-section {
-  padding: 18px;
-  margin-top: 14px;
-  border-radius: 12px;
-  background: #f8fafc;
-  border-left: 3px solid #2563eb;
-}
-
-.figure-section h4 {
-  color: #1e293b;
-  margin-bottom: 8px;
-  font-size: 15px;
+  color: #0f172a;
+  font-size: 13px;
+  line-height: 1.35;
   font-weight: 600;
 }
 
-.figure-section p {
-  color: #475569;
-  line-height: 1.75;
-  font-size: 14px;
+/* ============ CONTRIBUTION & IMPORTANCE SECTIONS ============ */
+
+.figure-information .figure-section {
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+  margin-top: 14px;
+  transition: all 0.3s ease;
 }
 
-.importance-section { border-left-color: #ec4899; }
+.figure-information .figure-section:hover {
+  background: linear-gradient(135deg, #eff6ff, #f8fafc);
+  transform: translateX(3px);
+}
+
+.figure-information .figure-section h4 {
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.figure-information .figure-section p {
+  color: #475569;
+  line-height: 1.75;
+  font-size: 13.5px;
+}
+
+/* Importance section — pink accent */
+
+.figure-information .importance-section {
+  border-left-color: #ec4899;
+  background: linear-gradient(135deg, #fdf2f8, #f8fafc);
+}
+
+.figure-information .importance-section:hover {
+  background: linear-gradient(135deg, #fce7f3, #fdf2f8);
+}
+
+/* ============ FIGURES ANALYSIS BOX ============ */
 
 .figures-analysis {
   max-width: 1000px;
-  margin: 55px auto 0;
-  padding: 40px;
-  border-radius: 18px;
+  margin: 70px auto 0;
+  padding: 42px;
+  border-radius: 20px;
   background: linear-gradient(135deg, #eff6ff, #fdf2f8);
   border: 1px solid #dbeafe;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.figures-analysis::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #ec4899);
 }
 
 .analysis-label {
@@ -172,34 +291,107 @@
   border-radius: 20px;
   background: #ffffff;
   color: #2563eb;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  margin-bottom: 15px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 16px;
 }
 
 .figures-analysis h2 {
-  color: #1e293b;
+  color: #0f172a;
   font-size: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  font-weight: 800;
 }
 
 .figures-analysis p {
   max-width: 820px;
   margin: 0 auto 15px;
   color: #475569;
-  line-height: 1.8;
+  line-height: 1.85;
+  font-size: 15px;
 }
+
+/* ============ RESPONSIVE ============ */
 
 @media (max-width: 900px) {
-  .figures-grid { grid-template-columns: 1fr; }
+  .figures-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .figure-image-container {
+    height: 300px;
+  }
 }
 
-@media (max-width: 600px) {
-  .figure-image-container { height: 260px; }
-  .figure-information { padding: 22px; }
-  .figure-information h2 { font-size: 22px; }
-  .figure-basic-info { grid-template-columns: 1fr; }
-  .figures-analysis { padding: 28px 20px; }
+@media (max-width: 700px) {
+  .figures-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .figure-image-container {
+    height: 320px;
+  }
+
+  .figure-information {
+    padding: 24px 22px 26px;
+  }
+
+  .figure-information::before {
+    left: 22px;
+    right: 22px;
+  }
+
+  .figure-information h2 { font-size: 21px; }
+  .figure-information h3 { font-size: 13.5px; }
+
+  .figure-basic-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .figure-basic-info div {
+    padding: 10px 12px;
+  }
+
+  .figure-basic-info strong { font-size: 12px; }
+
+  .figure-information .figure-section {
+    padding: 16px 16px;
+  }
+
+  .figure-information .figure-section h4 { font-size: 13.5px; }
+  .figure-information .figure-section p { font-size: 13px; }
+
+  .figures-analysis {
+    padding: 30px 22px;
+    margin-top: 50px;
+  }
+
   .figures-analysis h2 { font-size: 22px; }
+}
+
+@media (max-width: 420px) {
+  .figure-basic-info {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-image-container {
+    height: 280px;
+  }
+}
+
+/* ============ REDUCED MOTION ============ */
+
+@media (prefers-reduced-motion: reduce) {
+  .figure-profile,
+  .figure-image,
+  .figure-number,
+  .figure-period,
+  .figure-basic-info div,
+  .figure-information .figure-section {
+    transition: none !important;
+  }
 }

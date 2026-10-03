@@ -1,20 +1,21 @@
 import { useState } from "react";
 import "./Navbar.css";
 
-function Navbar({ setPage, currentPage }) {
+function Navbar({ activeSection }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navigate = (page) => {
-    setPage(page);
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     setMenuOpen(false);
   };
 
   const links = [
     ["home", "Home"],
-    ["historical", "History"],
-    ["contemporary", "Today"],
+    ["history", "History"],
+    ["today", "Today"],
     ["issues", "Issues"],
-    ["comparison", "Analysis"],
+    ["analysis", "Analysis"],
     ["multimedia", "Multimedia"],
     ["conclusion", "Conclusion"],
     ["references", "References"],
@@ -22,21 +23,22 @@ function Navbar({ setPage, currentPage }) {
 
   return (
     <nav className="navbar">
-      <button className="logo" onClick={() => navigate("home")}>
+      <button className="logo" onClick={() => scrollTo("home")}>
         BSIT-3C <span>|</span> GROUP 6
       </button>
 
       <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
+        {menuOpen ? "✕" : "☰"}
       </button>
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        {links.map(([page, label]) => (
+        {links.map(([id, label]) => (
           <button
-            key={page}
-            className={currentPage === page ? "active" : ""}
-            onClick={() => navigate(page)}
+            key={id}
+            className={activeSection === id ? "active" : ""}
+            onClick={() => scrollTo(id)}
           >
+            <span className="nav-dot" />
             {label}
           </button>
         ))}

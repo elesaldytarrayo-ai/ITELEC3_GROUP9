@@ -1,20 +1,32 @@
 .message-box {
   margin: 45px auto 0;
   max-width: 820px;
-  padding: 30px;
-  border-radius: 14px;
+  padding: 34px;
+  border-radius: 18px;
   text-align: center;
   background: linear-gradient(135deg, #eff6ff, #fdf2f8);
   border: 1px solid #dbeafe;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.message-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #ec4899);
 }
 
 .message-box h2 {
-  color: #1e293b;
+  color: #0f172a;
   margin-bottom: 12px;
   font-size: 22px;
+  font-weight: 800;
 }
 
 .message-box p {
   color: #475569;
-  line-height: 1.75;
+  line-height: 1.8;
 }
