@@ -1,434 +1,205 @@
-/* ============================= */
-/* KEY FIGURES PAGE */
-/* ============================= */
-
-.keyfigures-page {
-  background:
-    radial-gradient(
-      circle at 10% 10%,
-      #e5efff,
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 90% 15%,
-      #f8e3ff,
-      transparent 30%
-    );
-}
-
-
-/* ============================= */
-/* HEADER */
-/* ============================= */
+.keyfigures-page { background: #f8fafc; }
 
 .figures-header {
-  max-width: 850px;
-  margin: 0 auto 50px;
+  max-width: 820px;
+  margin: 0 auto 45px;
   text-align: center;
 }
 
 .figures-badge {
   display: inline-block;
-
-  padding: 8px 18px;
-
-  border-radius: 30px;
-
-  background: linear-gradient(
-    90deg,
-    #e5efff,
-    #f8e6ff
-  );
-
-  border: 1px solid #ded5ff;
-
-  color: #6252d1;
-
-  font-size: 13px;
-
-  font-weight: bold;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
 }
-
-
-/* ============================= */
-/* FIGURE GRID */
-/* ============================= */
 
 .figures-grid {
-  max-width: 1200px;
-
+  max-width: 1180px;
   margin: auto;
-
   display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
 }
-
-
-/* ============================= */
-/* FIGURE PROFILE */
-/* ============================= */
 
 .figure-profile {
   overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.95);
-
-  border: 1px solid #e3dcf7;
-
-  border-radius: 25px;
-
-  box-shadow:
-    0 12px 35px rgba(60, 50, 100, 0.09);
-
-  transition: 0.3s ease;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
 }
 
 .figure-profile:hover {
-  transform: translateY(-8px);
-
-  box-shadow:
-    0 20px 45px rgba(60, 50, 100, 0.16);
+  transform: translateY(-6px);
+  border-color: #fbcfe8;
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.12);
 }
-
-
-/* ============================= */
-/* IMAGE */
-/* ============================= */
 
 .figure-image-container {
   position: relative;
-
   width: 100%;
-
-  height: 330px;
-
+  height: 320px;
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #dceaff,
-      #f7ddff
-    );
+  background: #f1f5f9;
 }
 
 .figure-image {
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   display: block;
-
   transition: transform 0.5s ease;
 }
 
-.figure-profile:hover .figure-image {
-  transform: scale(1.05);
-}
-
-
-/* ============================= */
-/* NUMBER */
-/* ============================= */
+.figure-profile:hover .figure-image { transform: scale(1.05); }
 
 .figure-number {
   position: absolute;
-
-  top: 18px;
-
-  left: 18px;
-
-  width: 45px;
-
-  height: 45px;
-
+  top: 16px; left: 16px;
+  width: 42px; height: 42px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      #3275ff,
-      #c43de7
-    );
-
-  color: white;
-
-  font-size: 18px;
-
-  font-weight: bold;
-
-  box-shadow:
-    0 6px 18px rgba(50, 50, 120, 0.25);
+  background: linear-gradient(135deg, #2563eb, #ec4899);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
 }
 
-
-/* ============================= */
-/* INFORMATION */
-/* ============================= */
-
-.figure-information {
-  padding: 30px;
-}
+.figure-information { padding: 28px; }
 
 .figure-period {
   display: inline-block;
-
-  padding: 6px 12px;
-
+  padding: 5px 12px;
   border-radius: 20px;
-
-  background: #f1edff;
-
-  color: #745bd5;
-
+  background: linear-gradient(90deg, #eff6ff, #fdf2f8);
+  color: #2563eb;
   font-size: 12px;
-
-  font-weight: bold;
-
+  font-weight: 600;
   margin-bottom: 12px;
 }
 
 .figure-information h2 {
-  color: #385dc7;
-
-  font-size: 29px;
-
-  margin-bottom: 6px;
+  color: #1e293b;
+  font-size: 26px;
+  margin-bottom: 4px;
+  letter-spacing: -0.4px;
 }
 
 .figure-information h3 {
-  color: #c13ddf;
-
-  font-size: 16px;
-
-  margin-bottom: 22px;
+  color: #ec4899;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
-
-
-/* ============================= */
-/* BASIC INFORMATION */
-/* ============================= */
 
 .figure-basic-info {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .figure-basic-info div {
-  padding: 13px;
-
+  padding: 12px 14px;
   border-radius: 12px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f5f9ff,
-      #fcf4ff
-    );
-
-  border: 1px solid #eee8fa;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
 }
 
 .figure-basic-info span {
   display: block;
-
-  color: #858294;
-
-  font-size: 12px;
-
-  margin-bottom: 5px;
+  color: #64748b;
+  font-size: 11.5px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 .figure-basic-info strong {
   display: block;
-
-  color: #555268;
-
-  font-size: 13px;
-
+  color: #1e293b;
+  font-size: 13.5px;
   line-height: 1.4;
 }
 
-
-/* ============================= */
-/* CONTENT SECTIONS */
-/* ============================= */
-
 .figure-section {
-  padding: 20px;
-
-  margin-top: 15px;
-
-  border-radius: 15px;
-
-  background: #faf9ff;
-
-  border-left: 4px solid #4b78e8;
+  padding: 18px;
+  margin-top: 14px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border-left: 3px solid #2563eb;
 }
 
 .figure-section h4 {
-  color: #405fc9;
-
-  margin-bottom: 9px;
-
-  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .figure-section p {
-  color: #686679;
-
-  line-height: 1.7;
-
+  color: #475569;
+  line-height: 1.75;
   font-size: 14px;
 }
 
-
-/* ============================= */
-/* IMPORTANCE */
-/* ============================= */
-
-.importance-section {
-  border-left-color: #c33de0;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f7faff,
-      #fff5ff
-    );
-}
-
-.importance-section h4 {
-  color: #b33bd1;
-}
-
-
-/* ============================= */
-/* ANALYSIS */
-/* ============================= */
+.importance-section { border-left-color: #ec4899; }
 
 .figures-analysis {
   max-width: 1000px;
-
-  margin: 60px auto 0;
-
+  margin: 55px auto 0;
   padding: 40px;
-
-  border-radius: 25px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #e5efff,
-      #fae7ff
-    );
-
-  border: 1px solid #ddd5ff;
-
-  box-shadow:
-    0 10px 30px rgba(60, 50, 100, 0.08);
-
+  border-radius: 18px;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
   text-align: center;
 }
 
 .analysis-label {
   display: inline-block;
-
-  padding: 7px 15px;
-
+  padding: 6px 14px;
   border-radius: 20px;
-
-  background: white;
-
-  color: #6454d2;
-
+  background: #ffffff;
+  color: #2563eb;
   font-size: 12px;
-
-  font-weight: bold;
-
-  letter-spacing: 1px;
-
+  font-weight: 700;
+  letter-spacing: 0.8px;
   margin-bottom: 15px;
 }
 
 .figures-analysis h2 {
-  color: #5146c5;
-
-  font-size: 30px;
-
+  color: #1e293b;
+  font-size: 26px;
   margin-bottom: 15px;
 }
 
 .figures-analysis p {
-  max-width: 850px;
-
+  max-width: 820px;
   margin: 0 auto 15px;
-
-  color: #656376;
-
+  color: #475569;
   line-height: 1.8;
 }
 
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
 @media (max-width: 900px) {
-
-  .figures-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .figures-grid { grid-template-columns: 1fr; }
 }
 
-
 @media (max-width: 600px) {
-
-  .figure-image-container {
-    height: 280px;
-  }
-
-  .figure-information {
-    padding: 22px;
-  }
-
-  .figure-information h2 {
-    font-size: 25px;
-  }
-
-  .figure-basic-info {
-    grid-template-columns: 1fr;
-  }
-
-  .figures-analysis {
-    padding: 28px 20px;
-  }
-
-  .figures-analysis h2 {
-    font-size: 25px;
-  }
-
+  .figure-image-container { height: 260px; }
+  .figure-information { padding: 22px; }
+  .figure-information h2 { font-size: 22px; }
+  .figure-basic-info { grid-template-columns: 1fr; }
+  .figures-analysis { padding: 28px 20px; }
+  .figures-analysis h2 { font-size: 22px; }
 }

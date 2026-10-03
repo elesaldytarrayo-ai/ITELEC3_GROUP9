@@ -1,427 +1,205 @@
-/* ============================= */
-/* REFLECTION PAGE */
-/* ============================= */
-
-.reflection-page {
-  background:
-    radial-gradient(
-      circle at 10% 15%,
-      #e4efff,
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 90% 15%,
-      #f8e2ff,
-      transparent 30%
-    );
-}
-
-
-/* ============================= */
-/* HEADER */
-/* ============================= */
+.reflection-page { background: #f8fafc; }
 
 .reflection-header {
-  max-width: 850px;
+  max-width: 820px;
   margin: 0 auto 45px;
   text-align: center;
 }
 
 .reflection-badge {
   display: inline-block;
-
-  padding: 8px 18px;
-
-  border-radius: 30px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #e5efff,
-      #f9e5ff
-    );
-
-  border: 1px solid #ded6fa;
-
-  color: #6252d2;
-
-  font-size: 13px;
-
-  font-weight: bold;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 15px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
 }
-
-
-/* ============================= */
-/* MAIN REFLECTION BOX */
-/* ============================= */
 
 .reflection-box {
   width: 100%;
-  max-width: 850px;
-
+  max-width: 820px;
   margin: auto;
-
-  padding: 45px;
-
-  background: white;
-
-  border-radius: 28px;
-
-  border: 1px solid #e4dcf8;
-
-  box-shadow:
-    0 15px 40px rgba(60, 50, 100, 0.1);
-
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
   text-align: center;
 }
 
-
-/* ============================= */
-/* ICON */
-/* ============================= */
-
 .reflection-icon {
-  width: 80px;
-  height: 80px;
-
-  margin: 0 auto 20px;
-
+  width: 70px; height: 70px;
+  margin: 0 auto 18px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      #dceaff,
-      #f7ddff
-    );
-
-  font-size: 40px;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  font-size: 34px;
 }
 
 .reflection-box h2 {
-  color: #405fc9;
-
-  font-size: 28px;
-
+  color: #1e293b;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .reflection-intro {
-  max-width: 650px;
-
-  margin: 0 auto 25px;
-
-  color: #777386;
-
+  max-width: 620px;
+  margin: 0 auto 24px;
+  color: #64748b;
   line-height: 1.7;
+  font-size: 14.5px;
 }
-
-
-/* ============================= */
-/* SELECT */
-/* ============================= */
 
 .reflection-box select {
   width: 100%;
-
-  padding: 16px 18px;
-
-  border-radius: 14px;
-
-  border: 2px solid #ddd6f5;
-
-  background: white;
-
-  color: #555268;
-
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  background: #ffffff;
+  color: #1e293b;
   font-size: 15px;
-
   cursor: pointer;
-
   outline: none;
-
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
-.reflection-box select:hover {
-  border-color: #9a83ed;
-}
-
+.reflection-box select:hover { border-color: #c7d2fe; }
 .reflection-box select:focus {
-  border-color: #625ee0;
-
-  box-shadow:
-    0 0 0 4px rgba(100, 90, 220, 0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
-
-
-/* ============================= */
-/* ANSWER */
-/* ============================= */
 
 .reflection-answer {
-  margin-top: 35px;
-
-  padding: 30px;
-
-  border-radius: 22px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #eef5ff,
-      #fff0ff
-    );
-
-  border: 1px solid #e2dafa;
-
+  margin-top: 30px;
+  padding: 26px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
   text-align: left;
 }
 
-
-/* ============================= */
-/* QUESTION LABEL */
-/* ============================= */
-
 .question-label {
   display: inline-block;
-
-  padding: 6px 12px;
-
+  padding: 5px 12px;
   border-radius: 20px;
-
-  background: white;
-
-  color: #705ad1;
-
+  background: #ffffff;
+  color: #2563eb;
   font-size: 11px;
-
-  font-weight: bold;
-
-  letter-spacing: 1px;
-
+  font-weight: 700;
+  letter-spacing: 0.8px;
   margin-bottom: 12px;
 }
 
 .reflection-answer h3 {
-  color: #405fc9;
-
-  font-size: 21px;
-
-  line-height: 1.5;
-
-  margin-bottom: 25px;
+  color: #1e293b;
+  font-size: 19px;
+  line-height: 1.45;
+  margin-bottom: 20px;
 }
-
-
-/* ============================= */
-/* ANSWER CONTAINER */
-/* ============================= */
 
 .answer-container {
   display: flex;
-
-  gap: 18px;
-
-  padding: 22px;
-
-  border-radius: 18px;
-
-  background: white;
-
-  border: 1px solid #ebe5f7;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
 }
 
 .answer-icon {
-  min-width: 45px;
-
-  height: 45px;
-
+  min-width: 42px;
+  height: 42px;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      #dceaff,
-      #f4ddff
-    );
-
-  font-size: 22px;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  font-size: 20px;
 }
 
 .answer-label {
   display: block;
-
-  color: #bd3bdc;
-
-  font-weight: bold;
-
+  color: #ec4899;
+  font-weight: 700;
   margin-bottom: 8px;
+  font-size: 13px;
 }
 
 .answer-container p {
-  color: #666477;
-
+  color: #475569;
   line-height: 1.8;
-
-  font-size: 15px;
+  font-size: 14.5px;
 }
 
-
-/* ============================= */
-/* THINK ABOUT IT */
-/* ============================= */
-
 .thinking-box {
-  margin-top: 20px;
-
-  padding: 20px;
-
-  border-radius: 16px;
-
-  background:
-    #f9f7ff;
-
-  border-left: 4px solid #4c78e8;
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #ffffff;
+  border-left: 3px solid #2563eb;
 }
 
 .thinking-box h4 {
-  color: #405fc9;
-
-  margin-bottom: 7px;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
 
 .thinking-box p {
-  color: #6c697b;
-
+  color: #475569;
   line-height: 1.7;
-
-  font-size: 14px;
+  font-size: 13.5px;
 }
-
-
-/* ============================= */
-/* CRITICAL REFLECTION */
-/* ============================= */
 
 .critical-reflection {
   width: 100%;
-
   max-width: 1000px;
-
-  margin: 55px auto 0;
-
+  margin: 50px auto 0;
   padding: 40px;
-
-  border-radius: 25px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #e5efff,
-      #fae6ff
-    );
-
-  border: 1px solid #ddd5ff;
-
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
   text-align: center;
-
-  box-shadow:
-    0 10px 30px rgba(60, 50, 100, 0.08);
 }
-
-
-/* ============================= */
-/* LABEL */
-/* ============================= */
 
 .critical-label {
   display: inline-block;
-
-  padding: 7px 15px;
-
+  padding: 6px 14px;
   border-radius: 20px;
-
-  background: white;
-
-  color: #6554d1;
-
+  background: linear-gradient(90deg, #eff6ff, #fdf2f8);
+  color: #2563eb;
   font-size: 12px;
-
-  font-weight: bold;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
 }
 
 .critical-reflection h2 {
-  color: #5148c7;
-
-  font-size: 30px;
-
-  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 26px;
+  margin-bottom: 18px;
 }
 
 .critical-reflection p {
-  max-width: 850px;
-
+  max-width: 820px;
   margin: 0 auto 15px;
-
-  color: #686679;
-
+  color: #475569;
   line-height: 1.8;
 }
 
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
 @media (max-width: 700px) {
-
-  .reflection-box {
-    padding: 28px 20px;
-  }
-
-  .reflection-box h2 {
-    font-size: 24px;
-  }
-
-  .reflection-answer {
-    padding: 20px;
-  }
-
-  .reflection-answer h3 {
-    font-size: 18px;
-  }
-
-  .answer-container {
-    flex-direction: column;
-  }
-
-  .critical-reflection {
-    padding: 28px 20px;
-  }
-
-  .critical-reflection h2 {
-    font-size: 25px;
-  }
-
+  .reflection-box { padding: 26px 20px; }
+  .reflection-box h2 { font-size: 20px; }
+  .reflection-answer { padding: 18px; }
+  .reflection-answer h3 { font-size: 16px; }
+  .answer-container { flex-direction: column; }
+  .critical-reflection { padding: 26px 20px; }
+  .critical-reflection h2 { font-size: 22px; }
 }

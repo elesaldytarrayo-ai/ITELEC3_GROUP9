@@ -23,13 +23,10 @@ function Navbar({ setPage, currentPage }) {
   return (
     <nav className="navbar">
       <button className="logo" onClick={() => navigate("home")}>
-        <span>Gender</span> PH
+        BSIT-3C <span>|</span> GROUP 6
       </button>
 
-      <button
-        className="menu-btn"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
+      <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
       </button>
 

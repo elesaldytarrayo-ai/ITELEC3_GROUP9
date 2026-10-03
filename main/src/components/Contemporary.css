@@ -1,36 +1,20 @@
-.modern-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.modern-card::before {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  right: -30px;
-  top: -30px;
-  border-radius: 50%;
-  background: #eee8ff;
-}
-
 .message-box {
   margin: 45px auto 0;
-  max-width: 850px;
+  max-width: 820px;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 14px;
   text-align: center;
-
-  background: linear-gradient(135deg, #e8f1ff, #fbe9ff);
-  border: 1px solid #ddd4ff;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
 }
 
 .message-box h2 {
-  color: #5d4bd2;
+  color: #1e293b;
   margin-bottom: 12px;
+  font-size: 22px;
 }
 
 .message-box p {
-  color: #686679;
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.75;
 }

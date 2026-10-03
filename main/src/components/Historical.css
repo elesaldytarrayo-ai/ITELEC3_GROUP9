@@ -1,5 +1,5 @@
 .timeline {
-  max-width: 950px;
+  max-width: 900px;
   margin: auto;
   position: relative;
 }
@@ -7,77 +7,94 @@
 .timeline::before {
   content: "";
   position: absolute;
-  left: 28px;
+  left: 26px;
   top: 0;
   height: 100%;
-  width: 3px;
-  background: linear-gradient(#3679ff, #ca3de8);
+  width: 2px;
+  background: linear-gradient(#2563eb, #ec4899);
 }
 
 .timeline-item {
   display: flex;
-  gap: 25px;
-  margin-bottom: 30px;
+  gap: 22px;
+  margin-bottom: 26px;
   position: relative;
 }
 
 .timeline-icon {
-  min-width: 58px;
-  height: 58px;
+  min-width: 54px;
+  height: 54px;
   border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: linear-gradient(135deg, #3478ff, #c63de7);
-  font-size: 27px;
-  border: 5px solid #f6f3ff;
+  background: #ffffff;
+  border: 2px solid #dbeafe;
+  font-size: 24px;
   z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+  border-color: #ec4899;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.2);
 }
 
 .timeline-content {
-  background: white;
-  padding: 25px;
-  border-radius: 18px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
   flex: 1;
-  box-shadow: 0 8px 25px rgba(70, 60, 120, 0.08);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.1);
+  transform: translateY(-3px);
 }
 
 .timeline-content span {
-  color: #c13be5;
-  font-weight: bold;
+  color: #2563eb;
+  font-weight: 700;
   display: block;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
-.timeline-content small {
-  color: #777486;
-}
+.timeline-content small { color: #64748b; font-size: 13px; }
 
 .timeline-content h2 {
-  margin: 8px 0 10px;
-  color: #365ed1;
+  margin: 6px 0 10px;
+  color: #1e293b;
+  font-size: 20px;
 }
 
 .timeline-content p {
-  color: #6b697b;
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.75;
+  font-size: 14.5px;
 }
 
 .historical-note {
-  max-width: 850px;
+  max-width: 820px;
   margin: 45px auto 0;
   padding: 30px;
-  background: linear-gradient(135deg, #edf4ff, #fff0ff);
-  border-radius: 22px;
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
 }
 
 .historical-note h2 {
-  color: #5148c4;
+  color: #1e293b;
   margin-bottom: 10px;
+  font-size: 22px;
 }
 
 .historical-note p {
-  color: #686679;
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.75;
 }

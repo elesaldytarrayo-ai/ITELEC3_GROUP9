@@ -2,49 +2,55 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #f8fafc;
 }
 
 .conclusion-card {
-  max-width: 850px;
-  padding: 40px;
-  background: white;
-  border-radius: 25px;
-  box-shadow: 0 12px 35px rgba(60, 50, 100, 0.1);
+  max-width: 820px;
+  padding: 38px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
 .conclusion-icon {
   text-align: center;
-  font-size: 55px;
-  margin-bottom: 15px;
+  font-size: 48px;
+  margin-bottom: 14px;
 }
 
 .conclusion-card h2 {
   text-align: center;
-  color: #405fd0;
-  margin-bottom: 25px;
+  color: #1e293b;
+  margin-bottom: 22px;
+  font-size: 24px;
 }
 
 .conclusion-card p {
-  color: #686679;
+  color: #475569;
   line-height: 1.8;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  font-size: 15px;
 }
 
 .final-message {
-  max-width: 850px;
-  margin-top: 30px;
+  max-width: 820px;
+  margin-top: 26px;
   padding: 30px;
-  border-radius: 22px;
+  border-radius: 16px;
   text-align: center;
-  background: linear-gradient(135deg, #e3efff, #f9e5ff);
+  background: linear-gradient(135deg, #eff6ff, #fdf2f8);
+  border: 1px solid #dbeafe;
 }
 
 .final-message h2 {
-  color: #5b4bd2;
+  color: #1e293b;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .final-message p {
-  color: #686679;
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.75;
 }
